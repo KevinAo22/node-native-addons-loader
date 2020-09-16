@@ -39,7 +39,8 @@ module.exports = function (content) {
       " + ': ' + exception); };"
     );
   } else if (config.relativePath) {
-    const filePath = path.relative(relativePath, this.resourcePath);
+    const filePath = JSON.stringify(path.relative(config.relativePath, this.resourcePath));
+
     return (
       'try { global.process.dlopen(module, ' +
       filePath +
