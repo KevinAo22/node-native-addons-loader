@@ -1,0 +1,47 @@
+{
+  "name": "node-native-addons-loader",
+  "description": "webpack loader for node.js native addons",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Ao Zhang<kevinao@kevinao.com>",
+  "keywords": [
+    "node",
+    "electron",
+    "native",
+    "addons",
+    "loader",
+    "webpack"
+  ],
+  "main": "index.js",
+  "repository": "https://github.com/KevinAo22/node-native-addons-loader",
+  "scripts": {
+    "commit": "cz",
+    "release": "standard-version",
+    "release:major": "standard-version -r major -n",
+    "release:minor": "standard-version -r minor -n",
+    "release:patch": "standard-version -r patch -n",
+    "publish": ""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "commitizen": "^4.2.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.2",
+    "standard-version": "^9.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ]
+  }
+}
