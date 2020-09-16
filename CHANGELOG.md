@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/KevinAo22/node-native-addons-loader/compare/v0.4.0...v0.5.0) (2020-09-16)
+
+
+### Bug Fixes
+
+* support absolute path for development mode ([9073dcb](https://github.com/KevinAo22/node-native-addons-loader/commit/9073dcb5a480aa1c8531dddc1bb03b142dfd238c))
+
 ## [0.4.0](https://github.com/KevinAo22/node-native-addons-loader/compare/v0.3.0...v0.4.0) (2020-09-16)
 
 
