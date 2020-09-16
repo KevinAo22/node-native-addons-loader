@@ -1,9 +1,9 @@
 {
   "name": "node-native-addons-loader",
-  "description": "webpack loader for node.js native addons",
+  "author": "kevinao22",
   "version": "0.2.0",
   "license": "MIT",
-  "author": "Ao Zhang<kevinao@kevinao.com>",
+  "description": "webpack loader for node.js native addons",
   "keywords": [
     "node",
     "electron",
@@ -12,15 +12,20 @@
     "loader",
     "webpack"
   ],
+  "bugs": {
+    "url": "https://github.com/KevinAo22/node-native-addons-loader/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KevinAo22/node-native-addons-loader.git"
+  },
   "main": "index.js",
-  "repository": "https://github.com/KevinAo22/node-native-addons-loader",
   "scripts": {
     "commit": "cz",
     "release": "standard-version",
     "release:major": "standard-version -r major -n",
     "release:minor": "standard-version -r minor -n",
-    "release:patch": "standard-version -r patch -n",
-    "publish": ""
+    "release:patch": "standard-version -r patch -n"
   },
   "dependencies": {},
   "devDependencies": {
@@ -36,5 +41,11 @@
     "lint-staged": "^10.3.0",
     "prettier": "^2.1.2",
     "standard-version": "^9.0.0"
-  }
+  },
+  "files": [
+    "CHANGELOG.md",
+    "index.js",
+    "package.json",
+    "README.md"
+  ]
 }
