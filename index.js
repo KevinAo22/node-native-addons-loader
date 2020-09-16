@@ -49,7 +49,7 @@ module.exports = function (content) {
       filePath +
       " + ': ' + exception); };"
     );
-  } else {
+  } else if (config.basePath.length) {
     const filePathArray = config.basePath.concat(fileName);
     const filePath = JSON.stringify(filePathArray).slice(1, -1);
 
@@ -60,6 +60,17 @@ module.exports = function (content) {
       ');' +
       'try { global.process.dlopen(module, filePath); } ' +
       "catch(exception) { throw new Error('Cannot open ' + filePath + ': ' + exception); };"
+    );
+  } else {
+    const filePath = JSON.stringify(this.resourcePath);
+
+    return (
+      'try { global.process.dlopen(module, ' +
+      filePath +
+      '); } ' +
+      "catch(exception) { throw new Error('Cannot open' + " +
+      filePath +
+      " + ': ' + exception); };"
     );
   }
 };
